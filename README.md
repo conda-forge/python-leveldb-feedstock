@@ -73,6 +73,11 @@ Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-leveldb-feedstoc
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-leveldb-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-leveldb-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-leveldb-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-leveldb-feedstock/branch/master)
 
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-leveldb/badges/version.svg)](https://anaconda.org/conda-forge/python-leveldb)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/python-leveldb/badges/downloads.svg)](https://anaconda.org/conda-forge/python-leveldb)
+
 
 Updating python-leveldb-feedstock
 =================================
