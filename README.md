@@ -5,7 +5,7 @@ Home: http://code.google.com/p/py-leveldb/
 
 Package license: BSD 3-Clause
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: Python bindings for leveldb database library
 
@@ -69,6 +69,7 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/python-leveldb-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/python-leveldb-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/python-leveldb-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/python-leveldb-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/python-leveldb-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/python-leveldb-feedstock/branch/master)
