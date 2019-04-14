@@ -1,4 +1,4 @@
-{% set version = "0.193" %}
+{% set version = "0.194" %}
 
 package:
   name: python-leveldb
@@ -7,21 +7,23 @@ package:
 source:
   fn: leveldb-{{ version }}.tar.gz
   url: https://pypi.python.org/packages/source/l/leveldb/leveldb-{{ version }}.tar.gz
-  md5: 2952434f2a0ce10c44f58542cc561589
+  sha256: 9c3378b3b4336cc63303e9fe5d054a337d50bafec80ac4628db19a598c0fcd38
 
 build:
   skip: true  # [win]
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1000
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
-    - leveldb
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - leveldb 1.18
     - python
-    - setuptools
-
+    - pip
   run:
-    - leveldb
+    - leveldb 1.18
     - python
 
 test:
