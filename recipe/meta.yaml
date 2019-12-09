@@ -1,4 +1,4 @@
-{% set version = "0.194" %}
+{% set version = "0.201" %}
 
 package:
   name: python-leveldb
@@ -7,12 +7,12 @@ package:
 source:
   fn: leveldb-{{ version }}.tar.gz
   url: https://pypi.python.org/packages/source/l/leveldb/leveldb-{{ version }}.tar.gz
-  sha256: 9c3378b3b4336cc63303e9fe5d054a337d50bafec80ac4628db19a598c0fcd38
+  sha256: 1cffe776842917e09f073bd6ea5856c64136aebddbe51bd17ea29913472fecbf
 
 build:
   skip: true  # [win]
-  number: 1000
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
