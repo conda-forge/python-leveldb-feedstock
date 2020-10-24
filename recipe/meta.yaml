@@ -6,7 +6,7 @@ package:
 
 source:
   fn: leveldb-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/leveldb-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/l/leveldb/leveldb-{{ version }}.tar.gz
   sha256: 1cffe776842917e09f073bd6ea5856c64136aebddbe51bd17ea29913472fecbf
 
 build:
