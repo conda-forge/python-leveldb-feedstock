@@ -8,7 +8,7 @@ source:
   url: https://pypi.io/packages/source/l/leveldb/leveldb-{{ version }}.tar.gz
   sha256: 1cffe776842917e09f073bd6ea5856c64136aebddbe51bd17ea29913472fecbf
   patches:
-    - 0001-Use-PyUnicode_DATA.patch
+    - 13.patch
 
 build:
   skip: true  # [win]

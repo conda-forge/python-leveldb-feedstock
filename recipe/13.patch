@@ -1,0 +1,36 @@
+From 1cdd43da1b633fab9c490a33b5eed2de50330a8c Mon Sep 17 00:00:00 2001
+From: Inada Naoki <songofacandy@gmail.com>
+Date: Tue, 16 Jun 2020 19:25:52 +0900
+Subject: [PATCH] Remove use of deprecated API
+
+PyUnicode_AS_UNICODE is deprecated and slow since 3.3.
+---
+ leveldb_object.cc | 10 ++--------
+ 1 file changed, 2 insertions(+), 8 deletions(-)
+
+diff --git a/leveldb_object.cc b/leveldb_object.cc
+index da88d42..b831a2f 100644
+--- a/leveldb_object.cc
++++ b/leveldb_object.cc
+@@ -785,19 +785,13 @@ static int pyleveldb_str_eq(PyObject* p, const char* s)
+ {
+ 	// 8-bit string
+ 	#if PY_MAJOR_VERSION < 3
+-	if (PyString_Check(p) && strcmp(PyString_AS_STRING(p), "bytewise") == 0)
++	if (PyString_Check(p) && strcmp(PyString_AS_STRING(p), s) == 0)
+ 		return 1;
+ 	#endif
+ 
+ 	// unicode string
+ 	if (PyUnicode_Check(p)) {
+-		size_t i = 0;
+-		Py_UNICODE* c = PyUnicode_AS_UNICODE(p);
+-
+-		while (s[i] && c[i] && (int)s[i] == (int)c[i])
+-			i++;
+-
+-		return ((int)s[i] == (int)c[i]);
++		return PyUnicode_CompareWithASCIIString(p, s) == 0;
+ 	}
+ 
+ 	return 0;
