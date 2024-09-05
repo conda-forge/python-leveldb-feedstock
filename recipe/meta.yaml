@@ -12,12 +12,13 @@ source:
 
 build:
   skip: true  # [win]
-  number: 5
+  number: 6
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
   host:
     - leveldb 1.18
