@@ -24,6 +24,7 @@ requirements:
     - leveldb 1.18
     - python
     - pip
+    - setuptools
   run:
     - leveldb 1.18
     - python
